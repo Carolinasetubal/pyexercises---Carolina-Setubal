@@ -29,7 +29,7 @@ DELIVERABLE
 # 1. In: The user enters their name and age.
 # 2. Process: The program stores both inputs in variables and combines them into a sentence.
 # 3. Out: A sentence displaying the user´s name and age.
-# 4. My two fields, and what I would do with them: Name and age, to collect basic personal information for a registration form.
+# 4. My two fields, and what I would do with them: My two fields are Name and age, to collect basic personal information for a registration form.
 
 
 # Your code below
@@ -39,7 +39,7 @@ age = input("Enter your age:")
 print(name)
 print(age)
 print(name, age)
-print("Hi, my name is " + name + " and my age is " + age)
+print("Hello, my name is " + name + " and my age is " + age)
 
 
 
