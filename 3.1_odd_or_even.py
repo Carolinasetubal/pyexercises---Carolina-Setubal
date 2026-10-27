@@ -49,4 +49,3 @@ else:
             print(i, "is even")
         else:
             print(i, "is odd")
-            
