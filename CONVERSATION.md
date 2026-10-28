@@ -176,3 +176,12 @@ What is the second argument of pop() used for?
 **Tutor:**
 
 Refused, off topic.
+
+---
+## 2026-10-28 09:14, in .
+
+**Me:** KeyError: 'price'
+
+**Tutor:**
+
+Refused, off topic.
