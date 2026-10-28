@@ -28,10 +28,37 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out:
-# 4. My stop condition, my attempt limit, my summary:
+# 1. In: The user's answer about continuing a marketing campaign.
+# 2. Process: Use a while loop to keep asking until the user says yes or reaches 5 attempts.
+# 3. Out: A message showing whether the campaign was confirmed and the number of attempts.
+# 4. My stop condition, my attempt limit, my summary: Stop condition: yes. Maximum 5 attempts. The summary shows the result and attempts.
 
 
 # Your code below
+
+# Block 1: Set the maximum attempts
+attempts = 0
+max_attempts = 5
+answer = ""
+
+# Block 2: Ask the user until the condition is met
+while answer != "yes" and attempts < max_attempts:
+    answer = input("Do you want to continue the marketing campaign? (yes/no): ")
+    answer = answer.strip().lower()
+    attempts = attempts + 1
+
+# Block 3: Display the final result
+if answer == "yes":
+    print("Marketing campaign confirmed.")
+else:
+    print("Maximum number of attempts reached.")
+
+# Block 4: Display the summary
+print("Total attempts:", attempts)
+
+
+# Test result:
+# The while loop repeated the question until the user answered yes.
+# It also stopped after 5 attempts if the answer was not yes.
+# The program accepted YES, yes and extra spaces.
+# The final summary showed the result and number of attempts.
