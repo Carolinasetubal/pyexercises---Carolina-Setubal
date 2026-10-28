@@ -185,3 +185,47 @@ Refused, off topic.
 **Tutor:**
 
 Refused, off topic.
+
+---
+## 2026-10-28 09:21, in .
+
+**Me:** what does python function range() do?
+
+**Tutor:**
+
+The `range()` function generates a sequence of numbers.
+
+```python
+# Generates numbers from 0 up to (but not including) 5
+numbers = range(5)
+print(list(numbers))  # Output: [0, 1, 2, 3, 4]
+
+# Generates numbers from 2 to 5 (inclusive start, exclusive stop)
+numbers = range(2, 6)
+print(list(numbers))  # Output: [2, 3, 4, 5]
+
+# Generates numbers from 1 to 10, stepping by 2
+numbers = range(1, 11, 2)
+print(list(numbers))  # Output: [1, 3, 5, 7, 9]
+```
+
+What are the three arguments that `range()` can take, in the correct order?
+
+---
+## 2026-10-28 09:26, in .
+
+**Me:** what does python function enumerate() do?
+
+**Tutor:**
+
+The enumerate() function adds a counter to an iterable (like a list) and returns an enumerate object, which you can loop over.
+
+```python
+# Example: counting items in a list
+items = ['apple', 'banana', 'cherry']
+
+for index, value in enumerate(items):
+    print(index, value)
+```
+
+What does the second argument of `enumerate()` control?
