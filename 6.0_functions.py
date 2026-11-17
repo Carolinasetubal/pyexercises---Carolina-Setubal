@@ -26,27 +26,24 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
-# 1. In: A list of numbers.
-# 2. Process: Add all the numbers together.
-# 3. Out: The total sum of the numbers.
-# 4. My function name, and why return rather than print: calculate_sum because the name clearly explains what the function does.
+# 1. In: Two numbers (num1 and num2).
+# 2. Process: Add the two numbers together.
+# 3. Out: The sum of the two numbers.
+# 4. My function name, and why return rather than print: add_numbers because it clearly describes what the function does.
 
 
 # Your code below
 
-def calculate_sum(numbers):
-    total = 0
-    for number in numbers:
-        total += number
-    return total
+def add_numbers(num1, num2):
+    sum_result = num1 + num2
+    print("The sum of", num1, "and", num2, "is:", sum_result)
+    return sum_result
 
-print(calculate_sum([1, 2, 3]))
-print(calculate_sum([5, 10, 15]))
-print(calculate_sum([]))
+sum = add_numbers(10, 20)
+print(sum)
  
-# Final Results
-# Test 1: [1, 2, 3] returns 6
-# Test 2: [5, 10, 15] returns 30
-# Test 3: [] returns 0
-# All tests passed.
-# The function works correctly and returns the sum.
+# Final Results:
+# The function receives two numbers and adds them.
+# add_numbers(10, 20) returns 30.
+# The function works correctly.
+# It returns the result instead of only printing it.
