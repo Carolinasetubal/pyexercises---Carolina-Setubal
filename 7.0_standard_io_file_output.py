@@ -29,10 +29,39 @@ DELIVERABLE
     This file, plus the CSV your program produced.
 """
 
-# 1. In:
-# 2. Process:
-# 3. Out, file name and columns:
-# 4. Why these columns, and what this file is for:
+# 1. In: User input for one entry.
+# 2. Process: Collect the data and save it to a CSV file.
+# 3. Out, file name and columns: A CSV file with the recorded information.
+# 4. Why these columns, and what this file is for: name and age. These help organise the information about each person.
 
 
 # Your code below
+import csv
+import os
+
+filename = "student_data.csv"
+
+def save_entry():
+    name = input("Enter name: ")
+    age = input("Enter age: ")
+
+    file_exists = os.path.exists(filename)
+
+    with open(filename, "a", newline="") as file:
+        writer = csv.writer(file)
+
+        if not file_exists or os.path.getsize(filename) == 0:
+            writer.writerow(["name", "age"])
+
+        writer.writerow([name, age])
+
+for i in range(2):
+    save_entry()
+
+# Final Results:
+# The program collects a name and age.
+# It saves two entries each time it runs.
+# The CSV file has one header line.
+# Running it three times adds six entries.
+# Existing data is not overwritten.
+# Invalid input is not checked yet.
