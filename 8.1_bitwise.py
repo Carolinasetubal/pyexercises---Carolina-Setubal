@@ -21,4 +21,37 @@ DELIVERABLE
     This file, with your comments and your code.
 """
 
+# ⁠In: A set of permissions represented by numbers.
+# ⁠Process: Use bitwise operators to combine permissions, check if a permission exists, and remove one.
+# ⁠Out: The permission values after each operation.
+# ⁠Permissions: View, Edit and Publish. They represent what a user is allowed to do.
+
 # Your code below
+# Permissions
+VIEW = 1
+EDIT = 2
+PUBLISH = 4
+
+# Combine permissions
+permissions = VIEW | EDIT
+print("Combined:", bin(permissions))
+
+# Check if Publish is present
+print("Can publish:", bool(permissions & PUBLISH))
+
+# Add Publish
+permissions = permissions | PUBLISH
+print("After adding Publish:", bin(permissions))
+
+# Remove Edit
+permissions = permissions & ~EDIT
+print("After removing Edit:", bin(permissions))
+
+# Final Results:
+# VIEW = 001, EDIT = 010, PUBLISH = 100
+# Combining VIEW and EDIT gives 011.
+# PUBLISH is initially not present.
+# Adding PUBLISH gives 111.
+# Removing EDIT gives 101.
+# The remaining permissions are VIEW and PUBLISH.
+
