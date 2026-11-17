@@ -37,15 +37,39 @@ DELIVERABLE
 """
 
 # What is wrong with names.txt (found by reading it, not by guessing):
-# -
-# -
-# -
-# -
+# - Some lines are empty.
+# - Some names may have extra spaces.
+# - The names are not sorted by last name.
+# - Some surnames may contain more than one word.
 
-# 1. In:
-# 2. Process, problem by problem:
-# 3. Out:
-# 4. How I decide which word is the last name:
+# 1. In: The names.txt file containing a list of names.
+# 2. Process, problem by problem: Read the file, remove empty lines, sort the names by last name, and save them.
+# 3. Out: A new file called sorted_names.txt containing the sorted names. 
+# 4. How I decide which word is the last name: Split each name into words and use the last word to sort the list.
 
 
 # Your code below
+# Read the original file
+with open("names.txt", "r") as file:
+    names = file.readlines()
+
+# Remove empty lines and extra spaces
+names = [name.strip() for name in names if name.strip()]
+
+# Sort by last name
+names.sort(key=lambda name: name.split()[-1].lower())
+
+# Save the sorted names
+with open("sorted_names.txt", "w") as file:
+    for name in names:
+        file.write(name + "\n")
+
+print("Names sorted and saved successfully!")
+
+# Final Results:
+# The program reads names from names.txt.
+# It removes empty lines and extra spaces.
+# It sorts the names alphabetically by last name.
+# It saves the result in sorted_names.txt.
+# The original file is not modified.
+# The program works if names.txt exists.
